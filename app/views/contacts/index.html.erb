@@ -1,14 +1,22 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Contacts</h1>
-
-<div id="contacts">
-  <% @contacts.each do |contact| %>
-    <%= render contact %>
-    <p>
-      <%= link_to "Show this contact", contact %>
-    </p>
-  <% end %>
+<div class="d-flex justify-content-around pb-4 pt-3">
+  <h1>Contacts</h1>
+  <p class="mt-2"><%= link_to "Add new contact", new_contact_path, class:"btn btn-outline-secondary" %></p>
 </div>
-
-<%= link_to "New contact", new_contact_path %>
+<table class="table table-striped-columns table-light table-hover">
+  <thead class="table-light text-center align-middle">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Social Media</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody class="text-center align-middle">
+    <% @contacts.each do |contact| %>
+      <%= render contact %>
+    <% end %>
+  </tbody>
+</table>
