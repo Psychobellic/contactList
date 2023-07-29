@@ -12,6 +12,9 @@
   </head>
   <body>
     <%= render 'partials/navbar' %>
+    <% if notice %>
+      <%= render 'partials/alert' %>
+    <%end%>
     <%= yield %>
     <%= render 'partials/footer' %>
     <!-- Add Bootstrap JS -->
