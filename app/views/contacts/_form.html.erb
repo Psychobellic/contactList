@@ -11,20 +11,15 @@
     </div>
   <% end %>
   <div class="w-50 m-auto">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, class: "form-control" %>
+    <%= form.text_field :first_name, class: "form-control", placeholder: "First Name" %>
     <br>
-    <%= form.label :last_name%>
-    <%= form.text_field :last_name, class: "form-control" %>
+    <%= form.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
     <br>
-    <%= form.label :email%>
-    <%= form.text_field :email, class: "form-control" %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Email" %>
     <br>
-    <%= form.label :phone%>
-    <%= form.text_field :phone, class: "form-control" %>
+    <%= form.text_field :phone, class: "form-control", placeholder: "Phone Number" %>
     <br>
-    <%= form.label :social_media%>
-    <%= form.text_field :social_media, class: "form-control" %>
+    <%= form.text_field :social_media, class: "form-control", placeholder: "Social Media" %>
     <br>
     <div class="d-grid w-50 mx-auto">
     <%if current_page?(new_contact_path)%>

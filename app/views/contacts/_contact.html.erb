@@ -19,7 +19,7 @@
       <%= link_to "Show", contact, class:"btn btn-outline-secondary" %>
     <%end%>
     <%if current_page?(contact)%>
-      <%= link_to "Edit this contact", edit_contact_path(@contact), class:"btn btn-outline-secondary" %>
+      <%= link_to "Edit contact", edit_contact_path(@contact), class:"btn btn-outline-secondary" %>
       <%= link_to "Back to homepage", contacts_path, class:"btn btn-outline-secondary" %>
       <%= button_to "Remove contact", @contact, method: :delete, class:"btn btn-outline-danger mt-2" %>
     <%end%>
