@@ -22,21 +22,21 @@
     <%= form.text_field :social_media, class: "form-control", placeholder: "Social Media" %>
     <br>
     <div class="d-grid w-50 mx-auto">
-    <%if current_page?(new_contact_path)%>
-      <%= button_tag(type: "submit", class:"btn btn-outline-secondary ") do %>Create<%end%>
-    <%else%>
-      <%= button_tag(type: "submit", class:"btn btn-outline-secondary ") do %>Update<%end%>
-    <%end%>
+    <% if current_page?(new_contact_path) or contact.errors.any? %>
+      <%= button_tag(type: "submit", class:"btn btn-outline-secondary ") do %>Create<% end %>
+    <% else %>
+      <%= button_tag(type: "submit", class:"btn btn-outline-secondary ") do %>Update<% end %>
+    <% end %>
     </div>
   </div>
 <% end %>
-<%if current_page?(new_contact_path)%>
+<% if current_page?(new_contact_path) %>
 <div class="mt-4 d-flex justify-content-evenly w-75 mx-auto">
   <%= link_to "Back to homepage", contacts_path, class:"btn btn-outline-secondary" %>
 </div>
-<%else%>
+<% else %>
 <div class="mt-4 d-flex justify-content-evenly w-75 mx-auto">
   <%= link_to "Show this contact", @contact, class:"btn btn-outline-secondary" %>
   <%= link_to "Back to homepage", contacts_path, class:"btn btn-outline-secondary" %>
 </div>
-<%end%>
+<% end %>
